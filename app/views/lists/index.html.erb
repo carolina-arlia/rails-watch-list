@@ -1,0 +1,17 @@
+<%= render "shared/banner_home" %>
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+        <h1>All your lists</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="col-md-4">
+          <%= render "shared/card_category", list: list %>
+      </div>
+    <% end %>
+  </div>
+</div>

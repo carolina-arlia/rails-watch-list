@@ -1,0 +1,25 @@
+<%= render "shared/banner_show", list: @list %>
+
+<%# <%= render "shared/card_movie" %> %>
+  <%# <ul> %>
+  <%# <% @list.bookmarks.each do |bookmark| %> %>
+    <%# <li><%= bookmark.comment %>  %>
+    <%# <%= bookmark.movie.title %> </li> %>
+    <%# <% end %> %>
+  <%# </ul> %>
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+        <h1>Your movies</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <% @lists.movies.each do |movie| %>
+      <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+      <div class="col-md-4">
+          <%= render "shared/card_movie", movie: movie %>
+      </div>
+    <% end %>
+  </div>
+</div>
