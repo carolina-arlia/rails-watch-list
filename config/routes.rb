@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 end
 
-# un usuario puede ver todas las listas - GET lists INDEX
-# un usuario puede ver nombre y detalle de una lista especifica -GET lists/42 SHOW
+# un usuario puede ver todas las listas - GET lists INDEX ok
+# un usuario puede ver nombre y detalle de una lista especifica -GET lists/42 SHOW ok
 # un usuario puede crear una nueva lista - GET lists/new y POST lists NEW Y CREATE
 
 # Un usuario puede agregar un nuevo bookmark (par movie/list) en una lista existente:
