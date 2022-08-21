@@ -1,3 +1,14 @@
+<% if list.photo.key %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(<%= cl_image_path list.photo.key %>)">
+<% else %>
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.image_url %>)">
-    <%= link_to list.name, list_path(list), class:"text-decoration-none" %>
+<% end %>
+    <div class="card-content-index">
+      <div class="card-text">
+        <%= link_to list.name, list_path(list), class:"text-decoration-none" %>
+      </div>
+      <div class="list-delete">
+        <%= link_to "Delete",  list_path(list), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class:"ms-3 text-danger" %>
+      </div>
+    </div>
   </div>
