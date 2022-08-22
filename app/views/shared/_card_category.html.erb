@@ -8,7 +8,9 @@
         <%= link_to list.name, list_path(list), class:"text-decoration-none" %>
       </div>
       <div class="list-delete">
-        <%= link_to "Delete",  list_path(list), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class:"ms-3 text-danger" %>
+        <%= link_to list_path(list), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class:"ms-3 text-danger" do %>
+          <i class="fa-solid fa-trash ms-3 text-danger"></i>
+        <% end %>
       </div>
     </div>
   </div>
